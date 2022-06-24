@@ -1,6 +1,7 @@
-const name = process.cwd().split('\\').pop();
-console.log(name);
-const data = require('../../servers.json').servers[name];
+const array = process.cwd().split('\\')
+const name = array.pop();
+const uid = array[array.length - 1]
+const data = require('../../../servers.json').servers[uid][name];
 console.log(data);
 const {JavaCaller} = require('java-caller');
 //Start the server
